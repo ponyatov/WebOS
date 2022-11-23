@@ -1,0 +1,15 @@
+[package]
+name    = "webos"
+version = "0.0.1"
+edition = "2021"
+
+authors     = ["Dmitry Ponyatov <dponyatov@gmail.com>"]
+description =  "WebOS/WASM core"
+
+[dependencies]
+
+[target.'cfg(unix)'.dependencies]
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+
+[target.'cfg(windows)'.dependencies]
