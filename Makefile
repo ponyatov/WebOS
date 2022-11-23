@@ -20,14 +20,18 @@ R += $(shell find src -regex '.+.rs$$')
 S += $(F) $(R)
 
 # all
+.PHONY: all
 all:
 	$(CARGO) run -- $(F)
 
 # format
-format: $(R)
+.PHONY: format format_rs
+format: format_rs
+format_rs: $(R)
 	$(CARGO) fmt
 
 # doc
+.PHONY: doc
 doc: \
 	doc/rustbook_ru.pdf
 	rsync -rv ~/mdoc/$(MODULE)/* doc/$(MODULE)/ && git add doc

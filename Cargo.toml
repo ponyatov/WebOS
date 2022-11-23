@@ -3,8 +3,11 @@ name    = "webos"
 version = "0.0.1"
 edition = "2021"
 
-authors     = ["Dmitry Ponyatov <dponyatov@gmail.com>"]
-description =  "WebOS/WASM core"
+description =   "WebOS/WASM core"
+authors     = [
+                "SurenAt93",
+                "Dmitry Ponyatov <dponyatov@gmail.com>"
+            ]
 
 [dependencies]
 
